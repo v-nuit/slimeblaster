@@ -40,3 +40,21 @@ On triggering the script, it will:
 I will have to refrain from providing a compiled binary, as users may have to modify the script somewhat depending on their settings anyway. But generally, if you follow the soft requirements above, the script SHOULD be plug-and-play.
 
 You will need to first install [AutoHotkey v2](https://www.autohotkey.com/). Afterwards, you can just download slimeblaster.rar from the release page, extract the entire archive into a folder of your choice.
+
+The archive contains a few things:
+- A slimeblaster.ahk file. This is the main script.
+- A tester.ahk file. This script is the script you can quickly use to test the ability to detect the aforementioned elements on the screen.
+- A yes.png and a marker.png files, to describe the elements that the script needs to detect on the screen.
+
+## Using the scripts
+# Tester Script
+Before going all in on the automating process, you can first use the tester.ahk script to check if AHK can detect the elements on screen.
+
+Run tester.ahk and start up a Slimepede quest. Notice the quest marker on the top right part of the screen, to the left of the quest objective. Once this marker stops pulsing, press F1 to check if AHK can detect it. Open the main menu afterwards to obstruct this marker and press F1 again to see if AHK will falsely detect the marker or not.
+
+Afterwards, you can abandon quest but stay on the Yes/No prompt, then press F2 to check if AHK can detect the Yes option is selected or not.
+
+If the script can detect these elements correctly, the main script will most likely work fine. If not, you will have to utilize your image editor of choice to make your own comparison images, and perhaps edit the script's parameters.
+
+# Main script
+Run the 
