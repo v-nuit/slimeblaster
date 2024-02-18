@@ -39,4 +39,4 @@ On triggering the script, it will:
 ## Setup
 I will have to refrain from providing a compiled binary, as users may have to modify the script somewhat depending on their settings anyway. But generally, if you follow the soft requirements above, the script SHOULD be plug-and-play.
 
-You will need to first install [AutoHotkey v2](https://www.autohotkey.com/).
+You will need to first install [AutoHotkey v2](https://www.autohotkey.com/). Afterwards, you can just download slimeblaster.rar from the release page, extract the entire archive into a folder of your choice.
