@@ -35,26 +35,35 @@ On triggering the script, it will:
 - If this is not detected, constantly press LMB every 0.3 second to skip through the result screen and repeat the quest
 - Repeat the process
 
-### Usage
-## Setup
+## Usage
+### Setup
 I will have to refrain from providing a compiled binary, as users may have to modify the script somewhat depending on their settings anyway. But generally, if you follow the soft requirements above, the script SHOULD be plug-and-play.
 
-You will need to first install [AutoHotkey v2](https://www.autohotkey.com/). Afterwards, you can just download slimeblaster.rar from the release page, extract the entire archive into a folder of your choice.
+You will need to first install [AutoHotkey v2](https://www.autohotkey.com/). Afterwards, you can just download slimeblaster.rar from the latest release, and extract the entire archive into a folder of your choice.
 
 The archive contains a few things:
-- A slimeblaster.ahk file. This is the main script.
-- A tester.ahk file. This script is the script you can quickly use to test the ability to detect the aforementioned elements on the screen.
-- A yes.png and a marker.png files, to describe the elements that the script needs to detect on the screen.
+- Multiple slimeblaster_***.ahk2 file. These are the main scripts for different colorblind setting.
+- Multiple tester_***.ahk2 file. These scripts are the scripst you can quickly use to test the ability to detect the aforementioned elements on the screen, for different colorblind setting.
+- A folder containing various yes_***.png and marker_\*\*\*.png files, to describe the elements that the script needs to detect on the screen depending on colorblind setting.
 
-## Using the scripts
-# Tester Script
+### Tester Script
 Before going all in on the automating process, you can first use the tester.ahk script to check if AHK can detect the elements on screen.
 
-Run tester.ahk and start up a Slimepede quest. Notice the quest marker on the top right part of the screen, to the left of the quest objective. Once this marker stops pulsing, press F1 to check if AHK can detect it. Open the main menu afterwards to obstruct this marker and press F1 again to see if AHK will falsely detect the marker or not.
+Run tester_***.ahk for your colorblind setting and start up a Slimepede quest. Notice the quest marker on the top right part of the screen, to the left of the quest objective. Once this marker stops pulsing, press F1 to check if AHK can detect it. Open the main menu afterwards to obstruct this marker and press F1 again to see if AHK will falsely detect the marker or not.
 
 Afterwards, you can abandon quest but stay on the Yes/No prompt, then press F2 to check if AHK can detect the Yes option is selected or not.
 
 If the script can detect these elements correctly, the main script will most likely work fine. If not, you will have to utilize your image editor of choice to make your own comparison images, and perhaps edit the script's parameters.
 
-# Main script
-Run the 
+### Main script
+The script has two hotkeys, similar to Wielkimati's script:
+- F1 to start the script
+- Shift+ESC to kill the script
+
+Run the slimeblaster_*** for your colorblind setting, and then initiate a Slimepede quest.
+
+You will have to manually finish the quest once to reach the results screen in order to turn on quest repeat.
+
+You can then spam LMB to start the quest again, and press F1 when the quest starts to have the script working. At this point you can just let the script do its job.
+
+Press Shift+ESC at any time to kill the script.
