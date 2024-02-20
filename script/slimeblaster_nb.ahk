@@ -22,10 +22,16 @@ $F1::{
 				;wait for results screen
 				Sleep 18000
 	
-				;Spams LMB to get through result screen, press up to select yes if the prompt for repeating comes up
+				;Spams LMB to get through result screen, press 3 if repeat marker not detected, press up to select yes if any prompt comes up
 				startTime := A_TickCount
 				Loop {
 					try{
+						if !ImageSearch(&FoundX, &FoundY, 435, 760, 465, 790, "*TransBlack *8 " A_ScriptDir "\images\repeat_nb.png") and ImageSearch(&FoundX, &FoundY, 530, 170, 570, 210, "*TransBlack *8 " A_ScriptDir "\images\coin_nb.png"){
+							SendInput "{3 Down}"
+							Sleep 5
+							SendInput "{3 Up}"
+							Sleep 295
+						}
 						if ImageSearch(&FoundX, &FoundY, 900, 550, 1100, 850, "*TransBlack *8 " A_ScriptDir "\images\yes_nb.png"){
 							SendInput "{Up Down}"
 							Sleep 5

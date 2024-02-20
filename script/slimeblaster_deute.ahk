@@ -26,6 +26,12 @@ $F1::{
 				startTime := A_TickCount
 				Loop {
 					try{
+						if !ImageSearch(&FoundX, &FoundY, 435, 760, 465, 790, "*TransBlack *12 " A_ScriptDir "\images\repeat_deute.png") and ImageSearch(&FoundX, &FoundY, 530, 170, 570, 210, "*TransBlack *8 " A_ScriptDir "\images\coin_deute.png"){
+							SendInput "{3 Down}"
+							Sleep 5
+							SendInput "{3 Up}"
+							Sleep 295
+						}
 						if ImageSearch(&FoundX, &FoundY, 900, 550, 1100, 850, "*TransBlack *8 " A_ScriptDir "\images\yes_deute.png"){
 							SendInput "{Up Down}"
 							Sleep 5
