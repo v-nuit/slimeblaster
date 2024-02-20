@@ -54,7 +54,7 @@ Run tester_***.ahk for your colorblind setting and start up a Slimepede quest. N
 
 Afterwards, you can abandon quest but stay on the Yes/No prompt, then press F2 to check if AHK can detect the Yes option is selected or not.
 
-Finally, abandon the quest to go to the result screen. Press F3 to check if the script can detect the Rupies coin and the repeat quest marker or not.
+Finally, abandon the quest to go to the result screen. Press F3 and F4 to check if the script can properly detect the the repeat quest marker and the Rupies coin respectively.
 
 If the test scripts can detect these elements correctly, the main scripts will most likely work fine. If not, you will have to utilize your image editor of choice to make your own comparison images, and perhaps edit the script's parameters.
 
