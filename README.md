@@ -21,7 +21,7 @@ Due to the script using AHK's imagesearch function to detect certain elements on
 - The game needs to be ran at 1920x1080 borderless with no upscaling/downscaling involved
 - The in-game brightness level should be at 5/10
 - Windows' display calibration parameters should all be at default
-- No post-processing effect (Sharpening/Softening/AA through NVidia/AMD driver settings, Reshade, AutoHDR ... etc)
+- No post-processing effect (Sharpening/Softening/AA through NVidia/AMD driver settings, Reshade, AutoHDR ... etc) except the built-in colorblind options
 
 ### General Information
 Just as Wielkimati's script, this script is intended to be used with a decently geared Rackham and squad.
@@ -30,9 +30,10 @@ On triggering the script, it will:
 - Constantly search a small area on the top right of the screen to detect the quest marker next to the quest's objective "Defeat as many foes as possible"
 - When the quest marker is detected, send control to the game to move Rackham to the back of the room in 7.5 seconds and start blasting for the remaining 172.5 seconds
 - After 3 minutes are over, wait for 18 seconds for the results screen to pop up
-- Constantly search a small area in the lower middle part of the screen to detect an unselected "Yes" option from a prompt that pops up every 10 quest repeats, for 14 seconds
-- If this is detected, press Up and Enter to instruct the game to continue repeating the quest
-- If this is not detected, constantly press LMB every 0.3 second to skip through the result screen and repeat the quest
+- For 14 seconds, constantly perform the following steps:
+ - If a rupies coin is detected and the repeat quest marker is not detected, press 3 then wait 0.3 sec
+ - If an unselected "Yes" option from a prompt is detected, press Up then wait 0.3 sec
+ - If neither is detected, press LMB and wait 0.3 sec
 - Repeat the process
 
 ## Usage
@@ -53,17 +54,15 @@ Run tester_***.ahk for your colorblind setting and start up a Slimepede quest. N
 
 Afterwards, you can abandon quest but stay on the Yes/No prompt, then press F2 to check if AHK can detect the Yes option is selected or not.
 
-If the script can detect these elements correctly, the main script will most likely work fine. If not, you will have to utilize your image editor of choice to make your own comparison images, and perhaps edit the script's parameters.
+Finally, abandon the quest to go to the result screen. Press F3 to check if the script can detect the Rupies coin and the repeat quest marker or not.
+
+If the test scripts can detect these elements correctly, the main scripts will most likely work fine. If not, you will have to utilize your image editor of choice to make your own comparison images, and perhaps edit the script's parameters.
 
 ### Main script
 The script has two hotkeys, similar to Wielkimati's script:
 - F1 to start the script
 - Shift+ESC to kill the script
 
-Run the slimeblaster_*** for your colorblind setting, and then initiate a Slimepede quest.
-
-You will have to manually finish the quest once to reach the results screen in order to turn on quest repeat.
-
-You can then spam LMB to start the quest again, and press F1 when the quest starts to have the script working. At this point you can just let the script do its job.
+Run the slimeblaster_*** according to your colorblind setting, press F1 and initiate a Slimepede quest. That's it. You can now let the script do its things.
 
 Press Shift+ESC at any time to kill the script.
