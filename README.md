@@ -63,6 +63,6 @@ The script has two hotkeys, similar to Wielkimati's script:
 - F1 to start the script
 - Shift+ESC to kill the script
 
-Run the slimeblaster_*** according to your colorblind setting, press F1 and initiate a Slimepede quest. That's it. You can now let the script do its things.
+Run the slimeblaster_*** according to your colorblind setting, initiate a Slimepede quest and press F1. That's it. You can now let the script do its things.
 
 Press Shift+ESC at any time to kill the script.
